@@ -33,3 +33,5 @@ abricate --db GBS [genome_assembly.fna] > sample_result_1.tab
 abricate --summary sample_result_*.tab > summary.tab
 ```
 
+## Disclaimer
+Please cite the [publication](https://doi.org/10.1099/mgen.0.000688) for the database and ABRicate(version).  
