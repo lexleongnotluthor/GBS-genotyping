@@ -8,7 +8,7 @@ conda install -c conda-forge -c bioconda abricate
 abricate --check
 abricate --list
 ```
-2. Database
+2. GBS-SBG Database
 - Download [GBS-SBG.fasta](https://github.com/swainechen/GBS-SBG/GBS-SBG.fasta) from GBS-SBG or from here.
 - Make sure you have `BLAST+`, otherwise you can install BLAST+ using `conda`.
 ```
