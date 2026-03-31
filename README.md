@@ -9,10 +9,25 @@ abricate --check
 abricate --list
 ```
 2. Database
+- Download [GBS-SBG.fasta](https://github.com/swainechen/GBS-SBG/GBS-SBG.fasta) from GBS-SBG or from here.
+- Make sure you have `BLAST+`, otherwise you can install BLAST+ using `conda`.
+```
+conda install bioconda::blast
+```
+- Run `makeblastdb` as below
+```
+makeblastdb -dbtype nucl -in /{miniconda3-envs-pkg-db}/GBS/GBS-SBG.fasta -out /{miniconda3-envs-pkg-db}/GBS/sequences
+```
 
 ## Input
 Abricate only takes your genome sequences in FASTA format. 
 
 ## Usage
-
-`abricate --db GBS [genome_assembly.fna]`
+1. Running serotyping per sample.
+```
+abricate --db GBS [genome_assembly.fna] > sample_result_1.tab
+```
+2. Compiling all the data into 1 `summary.csv` file
+``` 
+abricate --summary sample_result_*.tab > summary.tab
+```
