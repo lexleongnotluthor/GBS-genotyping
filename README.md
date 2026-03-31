@@ -14,9 +14,10 @@ abricate --list
 ```
 conda install bioconda::blast
 ```
+- Move the fasta into a directory within your `miniconda3/envs/pkg/db`
 - Run `makeblastdb` as below
 ```
-makeblastdb -dbtype nucl -in /{miniconda3-envs-pkg-db}/GBS/GBS-SBG.fasta -out /{miniconda3-envs-pkg-db}/GBS/sequences
+makeblastdb -dbtype nucl -in /{miniconda3/envs/pkg/db}/GBS/GBS-SBG.fasta -out /{miniconda3/envs/pkg/db}/GBS/sequences
 ```
 
 ## Input
@@ -31,3 +32,4 @@ abricate --db GBS [genome_assembly.fna] > sample_result_1.tab
 ``` 
 abricate --summary sample_result_*.tab > summary.tab
 ```
+
